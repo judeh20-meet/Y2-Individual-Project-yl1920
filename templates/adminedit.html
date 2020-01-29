@@ -22,7 +22,7 @@
 		<ul class="links">
 			<li><a href="{{url_for('home')}}">Home</a></li>
 			<li><a href="{{url_for('Videogame')}}">VideoGames</a></li>
-			<li><a href="{{url_for('admin')}}">Admin Add</a></li>
+			<li><a href="{{url_for('admin')}}">Admin Add/Delete</a></li>
 			<li><a href="{{url_for('adminedit')}}">Admin Edit</a></li>
 			<li><a href="{{url_for('logout')}}">Logout from Admin</a></li>
 			
@@ -90,7 +90,6 @@
         <div class="carousel-caption">
           <h3>{{photo.name}}</h3>
           <p>{{photo.description}}</p>
-          <a href="/delete/{{photo.id}}"> delete ?</a>
         </div>
       </div>
       {% endfor %}
