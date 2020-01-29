@@ -41,5 +41,3 @@ def return_all_pictures():
 def query_by_id(their_id):
 	pictures = session.query(Picture).filter_by(id = their_id).delete()
 	session.commit()
-
-query_by_id(1)
