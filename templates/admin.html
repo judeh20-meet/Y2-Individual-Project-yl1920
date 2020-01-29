@@ -21,10 +21,11 @@
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="{{url_for('home')}}">Home</a></li>
-			<li><a href="{{url_for('Videogame')}}">VideoGames</a>
-			<li><a href="{{url_for('admin')}}">Admin</a></li><li><a href="{{url_for('logout')}}">Logout from Admin</a></li></li>
-			
-		</ul>
+			<li><a href="{{url_for('Videogame')}}">VideoGames</a></li>
+			<li><a href="{{url_for('admin')}}">Admin Add</a></li>
+			<li><a href="{{url_for('adminedit')}}">Admin Edit</a></li>
+			<li><a href="{{url_for('logout')}}">Logout from Admin</a></li>	
+			</ul>
 	</nav>
 
 <!-- Banner -->
@@ -34,7 +35,7 @@
 					<div class="inner">
 						<header>
 							<p>An EPIC game list by an ELITE gamer</p>
-							<h2>cool admin page</h2>
+							<h2>cool admin page ADD</h2>
 						</header>
 					</div>
 				</article>
@@ -54,25 +55,9 @@
 
 	<input type="submit" value="Submit">
 </form> 
-
+ 
 <br>
 
-<form action="/videogame" method="POST">
-	Edit Photo:
-	<br>
-	<input type="text" name="photoID_foredit" placeholder="photoID">
-	<br>
-	<input type="text" name="name_foredit" placeholder="photoname">
-	<br>
-	<input type="text" name="description_foredit" placeholder="photodescription">
-	<br>
-	<input type="text" name="photo_link_foredit" placeholder="photo link">
-	<br>
-
-	<input type="submit" value="Submit">
-</form> 
-
-<br>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

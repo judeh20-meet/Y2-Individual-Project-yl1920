@@ -21,8 +21,10 @@
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="{{url_for('home')}}">Home</a></li>
-			<li><a href="{{url_for('Videogame')}}">VideoGames</a>
-			<li><a href="{{url_for('admin')}}">Admin</a></li><li><a href="{{url_for('logout')}}">Logout from Admin</a></li></li>
+			<li><a href="{{url_for('Videogame')}}">VideoGames</a></li>
+			<li><a href="{{url_for('admin')}}">Admin Add</a></li>
+			<li><a href="{{url_for('adminedit')}}">Admin Edit</a></li>
+			<li><a href="{{url_for('logout')}}">Logout from Admin</a></li>
 			
 		</ul>
 	</nav>
@@ -34,13 +36,13 @@
 					<div class="inner">
 						<header>
 							<p>An EPIC game list by an ELITE gamer</p>
-							<h2>cool admin page</h2>
+							<h2>cool admin page EDIT</h2>
 						</header>
 					</div>
 				</article>
 			</section>
 
-<form action="/videogame" method="POST">
+<form action="/adminedit" method="POST">
 	Edit Photo:
 	<br>
 	<input type="text" name="photoID_foredit" placeholder="photoID">

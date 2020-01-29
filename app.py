@@ -21,19 +21,13 @@ def home():
 @app.route('/videogame', methods =["GET", "POST"])
 def Videogame():
 	if request.method == "POST":
-		
+
 		photoname = request.form['name']
 		photodescription = request.form['description']
 		photolink = request.form['photo_link']
 		add_picture(photoname,photodescription,photolink)
 		
-		photoID_foredit = request.form['photoID_foredit']
-		name_foredit = request.form['name_foredit']
-		description_foredit = request.form['description_foredit']
-		photo_link_foredit = request.form['photo_link_foredit']
-		edit_picture(photoID_foredit, name_foredit, description_foredit ,photo_link_foredit)
-		
-		return render_template('elements.html', pictures = return_all_pictures())
+		return render_template('admin.html', pictures = return_all_pictures())
 	else:
 		return render_template('elements.html', pictures = return_all_pictures())
 
@@ -67,6 +61,12 @@ def adminedit():
 			return redirect(url_for('home'))
 	else:
 
+		photoID_foredit = request.form['photoID_foredit']
+		name_foredit = request.form['name_foredit']
+		description_foredit = request.form['description_foredit']
+		photo_link_foredit = request.form['photo_link_foredit']
+		edit_picture(photoID_foredit, name_foredit, description_foredit ,photo_link_foredit)
+		
 		return render_template('adminedit.html', pictures = return_all_pictures())
 
 		
